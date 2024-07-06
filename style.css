@@ -1,0 +1,681 @@
+
+.vibrant-background {
+    background: linear-gradient(to bottom, #ff69b4, #ff3737);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    transition: background-position 0.5s ease-out;
+  }
+  
+  .vibrant-background:hover {
+    background-position: 100% 100%;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior:auto;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    position:fixed;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    box-shadow:   0 0 10px rgb(135, 120, 120);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 5px 10;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #151313;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff0000;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #d5a836;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #3769d4;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 22px;
+    font-size: 72px;
+}
+
+section .main .main_image img{
+    width: 650px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 105px;
+    bottom: 120px;
+    line-height: 24px;
+}
+
+.main_btn {
+    background: linear-gradient(to bottom, #666, #333); /* Metallic gradient */
+    border: 1px solid #444; /* Add a dark border */
+    border-radius: 5px; /* Add some curvature */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    color: #fff; /* White text */
+    cursor: pointer;
+    padding: 12px 20px;
+    position: relative;
+    left: 123px;
+    bottom: 30px;
+    width: 150px;
+    transition: background 0.2s ease-in-out; /* Animate background change */
+  }
+  
+  .main_btn:hover {
+    background: linear-gradient(to bottom, #777, #444); /* Darken the gradient on hover */
+  }
+  
+  .main_btn:active {
+    background: linear-gradient(to bottom, #666, #333); /* Reset to original gradient on click */
+    box-shadow: none; /* Remove shadow on click */
+    transform: none; /* Remove elevation on click */
+  }
+
+
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main_btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+
+section .main_btn:hover i{
+    transform: translateX(7px);
+}
+
+
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img{
+    width: 800px;
+    position: relative;
+    top: 60px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #384cfa;
+    margin-right: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+
+
+.about_btn {
+    background: linear-gradient(to bottom, #666, #333); /* Metallic gradient */
+    border: 1px solid #444; /* Add a dark border */
+    border-radius: 5px; /* Add some curvature */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    color: #fff; /* White text */
+    cursor: pointer;
+    padding: 12px 20px;
+    position: relative;
+    /* Remove fixed positioning and use flexbox to center the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /* Add margin to center the button horizontally */
+    width: 150px; /* Set a maximum width */
+    transition: background 0.2s ease-in-out; /* Animate background change */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .about_btn::after {
+    content: "\2192"; /* Add an arrow symbol */
+    font-size: 18px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out; /* Animate arrow movement */
+  }
+  
+  .about_btn:hover {
+    background: linear-gradient(to bottom, #777, #444); /* Darken the gradient on hover */
+  }
+  
+  .about_btn:hover::after {
+    transform: translateX(5px); /* Move the arrow 5px to the right on hover */
+  }
+  
+  .about_btn:active {
+    background: linear-gradient(to bottom, #666, #333); /* Reset to original gradient on click */
+    box-shadow: none; /* Remove shadow on click */
+    transform: none; /* Remove elevation on click */
+  }
+  
+  /* Add media queries to make the button responsive */
+  @media (max-width: 768px) {
+   .about_btn {
+      width: 100px; /* Reduce width on smaller screens */
+      padding: 10px 15px; /* Reduce padding on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+   .about_btn {
+      width: 80px; /* Reduce width on very small screens */
+      padding: 8px 12px; /* Reduce padding on very small screens */
+    }
+  }
+
+  
+  
+
+  
+
+
+
+
+/*Menu*/
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #4641e2;
+    margin-left: 15px;
+    font-family:'Times New Roman', Times, serif
+}
+
+
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #8B0A1A; /* Blue color */
+    text-shadow: 
+      0px 0px 10px rgba(10, 10, 11, 0.8), /* Blue glow */
+      0px 0px 20px rgba(171, 171, 223, 0.6), /* Softer blue glow */
+      0px 0px 30px rgba(112, 112, 177, 0.4); /* Faint blue glow */
+  }
+
+.menu .menu_box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff; /* White text */
+    background: linear-gradient(to bottom, #333, #222); /* Black metallic gradient */
+    border: 1px solid #444; /* Add a dark border */
+    border-radius: 5px; /* Add some curvature */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+  }
+  
+  .menu .menu_box .menu_card .menu_info .menu_btn:hover {
+    background: linear-gradient(to bottom, #777, #444); /* Darken the gradient on hover */
+    transform: translateY(-2px); /* Move the button up slightly on hover */
+  }
+  
+  .menu .menu_box .menu_card .menu_info .menu_btn:active {
+    background: linear-gradient(to bottom, #666, #333); /* Reset to original gradient on click */
+    box-shadow: none; /* Remove shadow on click */
+    transform: none; /* Remove elevation on click */
+  }
+  
+  .menu .menu_box .menu_card .menu_info .menu_btn:hover i {
+    transform: translateX(5px); /* Move the icon 5px to the right on hover */
+  }
+
+
+
+/*Gallary*/
+
+.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.gallary h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary h1 span{
+    margin-left: 15px;
+    color:  #4641e2;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+.gallary .gallary_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallary .gallary_image_box .gallary_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.gallary .gallary_image_box .gallary_image img{
+    width: 100%;
+    transition: .3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover img{
+    opacity: 0.4;
+}
+
+.gallary .gallary_image_box .gallary_image h3 {
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031; /* Metallic gold color */
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Add a metallic glow */
+    background-color: #666; /* Metallic background color */
+    padding: 5px 10px; /* Add some padding to make the metallic effect more visible */
+    border-radius: 5px; /* Add some curvature to the metallic effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a darker shadow to make the metallic effect more visible */
+  }
+  
+  .gallary .gallary_image_box .gallary_image:hover h3 {
+    opacity: 1; /* Show the text on hover */
+    transform: translateY(-10px); /* Move the text up slightly on hover */
+    animation: shine 1s infinite; /* Add a shining animation */
+  }
+  
+  @keyframes shine {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+  }
+
+.gallary .gallary_image_box .gallary_image:hover h3{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover p{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image .gallary_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover .gallary_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/*Order*/
+
+.order{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-image: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 55px;
+}
+
+.order h1 span{
+    color: #4641e2;
+    margin-right: 15px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+
+
+.order .order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order .order_main .order_image img{
+    width: 600px;
+}
+
+.order .order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.order .order_main form .input p{
+    line-height: 25px;
+}
+
+.order .order_main form .input{
+    margin: 5px;
+}
+
+.order .order_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.order .order_main form .input input:focus{
+    border: 2px solid #fac031;
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
